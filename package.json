@@ -1,0 +1,19 @@
+{
+  "name": "very-good-react",
+  "version": "0.0.0-beta.0",
+  "description": "A react wrapper around @digitalcredentials/veri-good providing entirely in-browser verification of Verifiable Credentials.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalcredentials/very-good-react.git"
+  },
+  "author": "James Chartrand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digitalcredentials/very-good-react/issues"
+  },
+  "homepage": "https://github.com/digitalcredentials/very-good-react#readme"
+}
