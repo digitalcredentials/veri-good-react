@@ -3,18 +3,30 @@ import React from 'react';
 import {useRef, useEffect} from 'react'
 import '@digitalcredentials/veri-good'
 
-const VeriGood = () => {
+const VeriGood = ({vc, children, issuerDids}) => {
   const wcRef = useRef(null);
 
+  /*
+  if a vc is passed in on the 'vc' prop then verify it
+  */
   useEffect(() => {
-    // Example: Call a 'connect' method defined in the web component
-   // if (wcRef.current && typeof wcRef.current.connect === 'function') {
-  //    wcRef.current.connect();
- //   }
-  }, []); // Run once on mount
+     if (vc && wcRef.current && typeof wcRef.current.verify === 'function') {
+      wcRef.current.verify(vc);
+    }
+  }, [vc]); 
+
+    /*
+  if a did list is passed in on the 'issuerDids' prop then set it
+  */
+  useEffect(() => {
+     if (issuerDids && wcRef.current && typeof wcRef.current.setIssuerDids === 'function') {
+      wcRef.current.setIssuerDids(issuerDids)
+    }
+  }, [issuerDids]); 
 
   const handleClick = () => {
-    // Example: Call a 'toggle' method on user interaction
+    // Example: test the verify call
+    // TODO: also test the setIssuerDids call here too.
     if (wcRef.current && typeof wcRef.current.verify === 'function') {
       wcRef.current.verify('https://digitalcredentials.github.io/vc-test-fixtures/verifiableCredentials/v1/bothSignatureTypes/didKey/noRegistry-noStatus-noExpiry.json');
     }
@@ -23,7 +35,9 @@ const VeriGood = () => {
   return (
     <div>
       <button onClick={handleClick}>verify sample</button>
-      <veri-good ref={wcRef}></veri-good>
+      <veri-good ref={wcRef}>
+        {children}
+      </veri-good>
     </div>
   );
 };

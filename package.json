@@ -1,6 +1,6 @@
 {
   "name": "@digitalcredentials/veri-good-react",
-  "version": "0.0.0-beta.2",
+  "version": "0.0.0-beta.3",
   "description": "A react wrapper around @digitalcredentials/veri-good providing entirely in-browser verification of Verifiable Credentials.",
   "main": "dist/index.js",
   "module": "dist/index.js",
