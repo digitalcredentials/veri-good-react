@@ -37,6 +37,6 @@
     "react-dom": ">=17.0.2"
   },
   "dependencies": {
-    "@digitalcredentials/veri-good": "^0.0.0-beta.3"
+    "@digitalcredentials/veri-good": "^0.0.0-beta.5"
   }
 }
