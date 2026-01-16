@@ -2,6 +2,10 @@
 
 A react wrapper around [@digitalcredentials/veri-good](https://github.com/digitalcredentials/veri-good) providing entirely in-browser verification of Verifiable Credentials.
 
+You can try out the verifier on the Github Page for veri-good:
+
+[https://digitalcredentials.github.io/veri-good/](https://digitalcredentials.github.io/veri-good/)
+
 ## Installation
 
 `npm i @digitalcredentials/veri-good-react`
