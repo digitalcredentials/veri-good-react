@@ -1,19 +1,42 @@
 {
-  "name": "very-good-react",
-  "version": "0.0.0-beta.0",
+  "name": "@digitalcredentials/veri-good-react",
+  "version": "0.0.0-beta.4",
   "description": "A react wrapper around @digitalcredentials/veri-good providing entirely in-browser verification of Verifiable Credentials.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "rimraf lib && babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/digitalcredentials/very-good-react.git"
+    "url": "git+https://github.com/digitalcredentials/veri-good-react.git"
   },
   "author": "James Chartrand",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/digitalcredentials/very-good-react/issues"
+    "url": "https://github.com/digitalcredentials/veri-good-react/issues"
   },
-  "homepage": "https://github.com/digitalcredentials/very-good-react#readme"
+  "homepage": "https://github.com/digitalcredentials/veri-good-react#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.28.6",
+    "@babel/preset-env": "^7.28.6",
+    "@babel/preset-react": "^7.28.5",
+    "rimraf": "^6.1.2"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  },
+  "dependencies": {
+    "@digitalcredentials/veri-good": "^0.0.0-beta.5"
+  }
 }
