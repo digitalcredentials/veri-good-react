@@ -1,8 +1,8 @@
 # veri-good-react
 
-A react wrapper around [@digitalcredentials/veri-good](https://github.com/digitalcredentials/veri-good) providing entirely in-browser verification of Verifiable Credentials.
+A react wrapper around [@digitalcredentials/veri-good](https://github.com/digitalcredentials/veri-good) providing entirely in-browser verification of [Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/).
 
-You can try out the verifier on the Github Page for veri-good:
+Try out the verifier on the Github Page for veri-good:
 
 [https://digitalcredentials.github.io/veri-good/](https://digitalcredentials.github.io/veri-good/)
 
@@ -26,7 +26,9 @@ export default function YourReactComponent() {
   return (
     <>
         <div>whatever else you have on your page</div>
+
         <VeriGood issuerDids={issuerDids}></VeriGood>
+
         <div>whatever else you have on your page</div>
     </>
   )
@@ -72,10 +74,6 @@ export default function YourReactComponent() {
   return (
     <>
         <VeriGood issuerDids={issuerDids} vc={yourVC}>
-            <div slot="header">
-              <div>A title</div>
-              <div>A subtitle</div>
-            </div>
         </VeriGood>
     </>
   )
